@@ -1,0 +1,156 @@
+# vim = set ft=toml:
+# Default colors
+# [colors.primary]
+# background = '0x151718'
+# foreground = '0xd6d6d6'
+
+# Colors the cursor will use if `custom_cursor_colors` is true
+# [colors.cursor]
+# text = '0x151718'
+# cursor = '0xd6d6d6'
+
+# Normal colors
+# [colors.normal]
+# black =   '0x151718'
+# red =     '0xcd3f45'
+# green =   '0x9fca56'
+# yellow =  '0xe6cd69'
+# blue =    '0x55b5db'
+# magenta = '0xa074c4'
+# cyan =    '0x55dbbe'
+# white =   '0xd6d6d6'
+
+# Bright colors
+# [colors.bright]
+# black =   '0x41535b'
+# red =     '0xcd3f45'
+# green =   '0x9fca56'
+# yellow =  '0xe6cd69'
+# blue =    '0x55b5db'
+# magenta = '0xa074c4'
+# cyan =    '0x55dbbe'
+# white =   '0xffffff'
+
+# colors.indexed_colors = [
+#   { index = 16, color = '0xdb7b55' },
+#   { index = 17, color = '0x8a553f' },
+#   { index = 19, color = '0x282a2b' },
+#   { index = 19, color = '0x3b758c' },
+#   { index = 20, color = '0x43a5d5' },
+#   { index = 21, color = '0xeeeeee' }
+# ]
+
+# BEGIN WAL
+[colors.primary]
+background = '#101621'
+foreground = '#d6d7bf'
+
+[colors.cursor]
+text   = '#101621' # Apply background color to color of text inside cursor
+cursor = '#d6d7bf' # Apply foreground color to color of cursor
+
+[colors.vi_mode_cursor]
+text    = '#101621' # Same as above
+cursor  = '#d6d7bf'
+
+[colors.search.matches]
+foreground = '#101621' # Same as above
+background = '#d6d7bf' # Apply bright/white color to bg color of matching search
+
+[colors.search.focused_match]
+foreground = 'CellBackground'
+background = 'CellForeground'
+
+[colors.line_indicator]
+foreground = 'None'
+background = 'None'
+
+[colors.footer_bar]
+foreground = '#959685'
+background = '#d6d7bf'
+
+[colors.selection]
+text       = 'CellBackground'
+background = 'CellForeground'
+
+[colors.normal]
+black   = '#101621'
+red     = '#867A6D'
+green   = '#7A8478'
+yellow  = '#938E7A'
+blue    = '#C0B57F'
+magenta = '#9A9A83'
+cyan    = '#B3B18A'
+white   = '#d6d7bf'
+
+[colors.bright]
+black   = '#959685'
+red     = '#867A6D'
+green   = '#7A8478'
+yellow  = '#938E7A'
+blue    = '#C0B57F'
+magenta = '#9A9A83'
+cyan    = '#B3B18A'
+white   = '#d6d7bf'
+# END WAL
+
+[cursor]
+blink_interval = 500
+blink_timeout = 5
+unfocused_hollow = false
+
+[cursor.style]
+blinking = "Off"
+shape = "Block"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 12
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 0
+
+[mouse]
+hide_when_typing = true
+
+[[mouse.bindings]]
+action = "PasteSelection"
+mouse = "Middle"
+
+[selection]
+semantic_escape_chars = ",│`|:\"' ()[]{}<>"
+
+[shell]
+program = "/bin/zsh"
+
+[window]
+decorations = "full"
+dynamic_title = true
+startup_mode = "Maximized"
+opacity = 0.8
+
+[window.dimensions]
+columns = 160
+lines = 80
+
+[window.padding]
+x = 4
+y = 6
